@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-const API_BASE_URL = 'https://bulkmail-backend-eum4.onrender.com' || '';
+const API_BASE_URL = (process.env.REACT_APP_API_BASE_URL || 'https://bulkmail-backend-eum4.onrender.com').replace(/\/$/, '');
 const AUTH_SESSION_KEY = 'bulkmail-authenticated';
 const VALID_USERNAME = 'admin';
 const VALID_PASSWORD = 'admin123';
